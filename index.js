@@ -29,4 +29,4 @@ app.get ("/products/:id", (req, res) => {
 app.use ((req, res , next) => {
     res.send("no encontrado");
 });
-app.listen(3000, () => console.log(`http://localhost:${port}`));
+app.listen(port, () => console.log(`http://localhost:${port}`));
