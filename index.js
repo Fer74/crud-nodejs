@@ -1,8 +1,10 @@
 import express from 'express';
 
 const app = express();  
+const port = 3000;
+
 app.get("/", (req, res) => {
-    res.send("Hola mundo !!!!")
+    res.send("Hola mundo !!!")
 });
 
 const products = [
@@ -27,4 +29,4 @@ app.get ("/products/:id", (req, res) => {
 app.use ((req, res , next) => {
     res.send("no encontrado");
 });
-app.listen(3000, () => console.log("http://localhost:3000"));
+app.listen(3000, () => console.log(`http://localhost:${port}`));
